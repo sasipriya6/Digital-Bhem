@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <title>Hotel booking form</title>
+        <link href="hotel.css" rel="stylesheet" type="text/css">
+        
+    </head>
+    <body >
+        
+      <section class="bookingform" id="bookingform">
+        <header class="head">
+            <nav class="nv">
+               <a href="hotelmain.html" style="float: left;margin-left:80%">Home</a>
+               <a href="hotel1.html" style="float: left;margin-left:2%">About</a>
+               <a href="hotel2.html"  style="margin-left:2%;"> Book now</a>
+            </nav>
+      
+         </header><br><br>
+      
+      <fieldset id="f1">
+            <form>
+               <label for="customerName" style="float: left;">Customer Name:</label>
+               <input type="text" id="customerName" required placeholder="Enter your name">
+       
+               <label for="checkInDate" style="margin-left: 30px;">Check-in Date:</label>
+               <input type="date" id="checkInDate" required placeholder="Check-in-date"><br><br>
+               <label>Phone no:</label>
+               <input type="number" id="phoneno" placeholder="Enter your phone number">
+               <label style="margin-left: 70px;">Email:</label>
+               <input type="email" id="email" placeholder="ex:ABC@gmail.com"><br><br>
+       
+               <label for="totalnoofdays" style="float: left;">Total No of Days:</label>
+               <input type="number" id="totalnoofdays" required placeholder="Enter total no of days">
+       
+               <label for="totalnoofpersons" style="margin-left: 30px;" >Total No of Persons:</label>
+               <input type="number" id="totalnoofpersons" required placeholder="Enter total no of persons"><br><br>
+       
+               <label for="roomtype" style="float: left;">Room Type:</label>
+               <select id="roomtype">
+                   <option value="Delux Room">Delux Room</option>
+                   <option value="Suite Room">Suite Room</option>
+               </select>
+               <label for="amentities" style="margin-left:130px;">Amentities:</label>
+               <select id="amentities">
+                   <option value="ac">ac</option>
+                   <option value="locker">locker</option>
+               </select><br><br>
+               <label>Room Rate:</label>
+               <ul type="circle">
+                  <li>-Deluxe Room:2500/-</li>
+                  <li>-Suite Room:4000/-</li>
+                  <li>-AC:1000/-</li>
+                  <li>-Locker:300/-</li>
+               </ul>
+               <label>Additional charges:</label>
+               <ul>
+                <li>-Upto 2 people:No Change in Cost</li>
+                <li>-Per Day Cost per Extra Person:1000/-</li>
+               </ul>
+       
+               <label for="advanceAmount">Advance Amount:</label>
+               <input type="number" id="advAmount" placeholder="Advance amount"><br><br>
+           <p>Total Room Cost: <span id="totalRoomCost">0</span></p>
+           <p>Total Amenities Cost: <span id="totalamenitiescost">0</span></p>
+           <p>Extra Persons Cost: <span id="extrapersonscost">0</span></p>
+           <p>Total Cost: <span id="totalCost">0</span></p>
+           <p>Balance: <span id="balanceamount">0</span></p>
+           <button type="button" onclick="calculatetotal()"><p>Caluculate Total</p></button>
+               <button type="submit" onclick="alert('You have booked Successfully! Thank you for your reservation.')"><p>Submit</p></button>
+           
+        </form>
+         </section>
+        </form>
+    </fieldset>
+    
+        <script src="hotel.js"></script>
+
+</body>
+</html>
